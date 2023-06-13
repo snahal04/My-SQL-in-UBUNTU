@@ -1,0 +1,30 @@
+Installing MySQL Workbench Using Deb Packages
+
+Download the package from the link : https://dev.mysql.com/downloads/repo/apt/
+
+Open Terminal Ctrl + Alt + Del
+cd Downloads
+ls
+sudo apt install ./mysql-apt-config_0.8.22-1_all.deb
+ok
+sudo apt update
+sudo apt install mysql-workbench-community
+# Now workbench is installed but still sql will not work 
+
+Open Workbench using command mysql-workbench
+
+now open a new terminal and install mysql server
+
+sudo apt install mysql-server
+This will install the MySQL server and all of the required dependencies on your system.
+
+sudo systemctl start mysql
+This will start the MySQL service and enable it to start automatically whenever the system is booted.
+
+sudo mysql_secure_installation
+This will start the MySQL root password setup wizard, which will guide you through the process of setting a password for the root user.
+
+Log in to MySQL: After setting the root password, you can log in to the MySQL server using the mysql command. To log in, run the following command:
+mysql -u root -p
+
+Now yo can create new connection in workbench 
